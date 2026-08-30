@@ -1,0 +1,77 @@
+import { Button } from "@/components/ui/button"
+import {
+  Card as CardRoot,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+
+const Card = () => {
+  const [email, setEmail] = React.useState("")
+  const [password, setPassword] = React.useState("")
+
+  return (
+    <CardRoot className="w-[382px] rounded-[14px] shadow-sm">
+      <CardHeader className="gap-1 pt-4">
+        <CardTitle className="text-base font-medium leading-6">Iniciar sesión</CardTitle>
+        <CardDescription className="text-sm leading-5">
+          Accede a tu cuenta para continuar.
+        </CardDescription>
+      </CardHeader>
+
+      <CardContent className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2">
+          <Label htmlFor="email" className="text-sm font-medium leading-5 text-foreground">
+            Correo electrónico
+          </Label>
+          <Input
+            id="email"
+            type="email"
+            placeholder="tu@email.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="h-8 rounded-[10px] bg-muted/30 px-2.5 py-1"
+          />
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <div className="flex items-center gap-2">
+            <Label htmlFor="password" className="flex-1 text-sm font-medium leading-5 text-foreground">
+              Contraseña
+            </Label>
+            <Button
+              variant="link"
+              className="h-auto p-0 text-sm font-normal leading-5 text-muted-foreground/80"
+              onClick={() => {}}
+            >
+              Recuperar contraseña
+            </Button>
+          </div>
+          <Input
+            id="password"
+            type="password"
+            placeholder="Ingresa tu contraseña"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="h-8 rounded-[10px] bg-muted/30 px-2.5 py-1"
+          />
+        </div>
+      </CardContent>
+
+      <CardFooter className="flex flex-col gap-2 bg-muted">
+        <Button className="h-8 w-full rounded-[10px] px-3 py-1.5" onClick={() => {}}>
+          Entrar
+        </Button>
+        <p className="pt-2 text-center text-sm leading-5 text-card-foreground">
+          ¿Aún no tienes una cuenta? Regístrate
+        </p>
+      </CardFooter>
+    </CardRoot>
+  )
+}
+
+export default Card
