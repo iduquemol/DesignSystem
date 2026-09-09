@@ -1,16 +1,16 @@
 import { useState } from "react"
-import { CardDemo } from "./components/CardDemo"
+import { LoginForm } from "@/components/login-form"
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
 
-  // if (!isLoggedIn) {
-  //   return <CardDemo  />
-  // }
+  if (!isLoggedIn) {
+    return <LoginForm onLoginSuccess={() => setIsLoggedIn(true)} />
+  }
 
   return (
     <div className="flex min-h-screen items-center justify-center">
-      <CardDemo />
+      <h1 className="text-2xl font-bold">Bienvenido, ya iniciaste sesión</h1>
     </div>
   )
 }
