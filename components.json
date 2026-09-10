@@ -6,7 +6,11 @@
   "tailwind": {
     "config": "",
     "css": "src/index.css",
+<<<<<<< HEAD
     "baseColor": "mauve",
+=======
+    "baseColor": "olive",
+>>>>>>> 1c90980 (feat: add login component and form, implement collapsible sidebar, and enhance UI components)
     "cssVariables": true,
     "prefix": ""
   },
@@ -19,7 +23,11 @@
     "lib": "@/lib",
     "hooks": "@/hooks"
   },
+<<<<<<< HEAD
   "menuColor": "inverted-translucent",
+=======
+  "menuColor": "inverted",
+>>>>>>> 1c90980 (feat: add login component and form, implement collapsible sidebar, and enhance UI components)
   "menuAccent": "subtle",
   "registries": {}
 }
